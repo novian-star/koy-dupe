@@ -6,7 +6,7 @@ const phoneElement = document.getElementById('phone');
 const storeElement = document.getElementById('store');
 
 const date = new Date().toLocaleString('en-US', { timeZone: 'Asia/Bangkok'});
-const day = new Date(date).getDate();
+const day = new Date(date).getDate().toString().padStart(2, '0');
 const month = (new Date(date).getMonth() + 1).toString().padStart(2, '0');
 const year = new Date(date).getFullYear();
 const dateFormat = `${year}/${month}/${day}`;
